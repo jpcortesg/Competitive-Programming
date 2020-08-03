@@ -1,6 +1,6 @@
-dic = {
-    'hola' : 1,
-    'Hola' : 2,
-}
+p = input()
 
-print('dos' in dic)
+n = p[1:len(p)]
+
+a = int(n)
+print(a)
