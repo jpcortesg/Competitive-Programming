@@ -1,6 +1,6 @@
-p = input()
+s = 5
+st = 'londo'
+st = st[int((s-1) / 2)] + st[: int((s-1) / 2)] + st[int((s-1) / 2 + 1):]
+st = st[ int(s / 2) - 1] + st[: int(s / 2) - 1] + st[int(s / 2):]
 
-n = p[1:len(p)]
-
-a = int(n)
-print(a)
+print(st)
