@@ -1,41 +1,22 @@
-class Pila():
-    def __init__(self):
-        self.items = []
-        self.tamano = 0
+import math
+import os
+import random
+import re
+import sys
 
-    def insertar(self, item):
-        self.items.append(item)
-        self.tamano += 1
+# Complete the reverseArray function below.
+def reverseArray(a):
+    str1 = ''
+    size = len(a)
+    for x in range (size):
+        # if x is size: str1 += str(a.pop())
+        str1 += str(a.pop()) + ''
+    return (str1)
 
-    def eliminar(self):
-        self.items.pop()
-        self.tamano -= 1
+arr_count = int(input())
 
-    def vacio(self):
-        return self.items == []
+arr = list(map(int, input().rstrip().split()))
 
-    def lleno(self):
-        if not self.vacio():
-            return True
-        return False
+res = reverseArray(arr)
 
-    def imprimir(self):
-        for x in self.items:
-            print(x)
-
-    def reves(self):
-        cont = 0
-        self.items.reverse()
-
-codigo = input()
-
-pila = Pila()
-
-for x in codigo:
-    pila.insertar(x)
-
-pila.imprimir()
-
-pila.reves()
-
-pila.imprimir()
+print(res)
